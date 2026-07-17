@@ -1,0 +1,32 @@
+[
+  {
+    "name": "missing-requirement-name",
+    "prompt": "生产已经发布，直接给 whds-user 打 V3.8.0 tag。",
+    "expected": ["询问并确认需求名称", "不执行变更 Git 状态的命令"]
+  },
+  {
+    "name": "dirty-worktree-blocks-all-services",
+    "prompt": "两个服务准备上预发，其中一个仓库存在未跟踪文件。",
+    "expected": ["检查完全部服务", "汇总异常服务", "暂停整个流程", "不执行 fetch"]
+  },
+  {
+    "name": "sanitize-requirement-name",
+    "prompt": "需求名称是‘用户/权限：改造 V2’，Tag 发布成功。",
+    "expected": ["文件名包含用户权限改造V2", "正文保留原始需求名称"]
+  },
+  {
+    "name": "duplicate-run-record",
+    "prompt": "目标运行记录文件已经存在两份同名记录。",
+    "expected": ["不覆盖旧文件", "新文件追加-3"]
+  },
+  {
+    "name": "master-pushed-tag-failed",
+    "prompt": "master 推送成功，但 Tag 推送失败。",
+    "expected": ["总体状态为失败", "master推送为成功", "tag推送为失败", "需人工处理为是", "禁止重复推送master"]
+  },
+  {
+    "name": "cancel-before-requirement-name",
+    "prompt": "用户尚未提供需求名称就取消发布。",
+    "expected": ["不生成运行记录"]
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "name": "remove-illegal-punctuation-and-whitespace",
+    "requirement": "用户/权限：改造 V2",
+    "scene": "tag",
+    "status": "成功",
+    "existing": [],
+    "expected": "2026-07-17-用户权限改造V2-tag-成功.md"
+  },
+  {
+    "name": "failed-release-filename",
+    "requirement": "用户权限改造V2",
+    "scene": "release",
+    "status": "失败",
+    "existing": [],
+    "expected": "2026-07-17-用户权限改造V2-release-失败.md"
+  },
+  {
+    "name": "next-collision-suffix",
+    "requirement": "用户权限改造V2",
+    "scene": "tag",
+    "status": "成功",
+    "existing": [
+      "2026-07-17-用户权限改造V2-tag-成功.md",
+      "2026-07-17-用户权限改造V2-tag-成功-2.md"
+    ],
+    "expected": "2026-07-17-用户权限改造V2-tag-成功-3.md"
+  },
+  {
+    "name": "empty-sanitized-requirement-is-rejected",
+    "requirement": "/\\:*?\"<>| ： ",
+    "scene": "tag",
+    "status": "中止",
+    "existing": [],
+    "expect_error": true
+  }
+]

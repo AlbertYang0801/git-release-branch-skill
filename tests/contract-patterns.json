@@ -1,0 +1,14 @@
+[
+  {"name": "semantic version exists", "pattern": "(?m)^version: \\d+\\.\\d+\\.\\d+$"},
+  {"name": "requirement name confirmation gate", "pattern": "每次运行必须取得并确认本次上线需求名称"},
+  {"name": "cancel before requirement creates no record", "pattern": "取得有效需求名称前用户取消或不再回复时，不生成运行记录"},
+  {"name": "all repositories checked", "pattern": "必须检查完所有服务再汇总"},
+  {"name": "dirty repository blocks every service", "pattern": "任一服务非空时暂停整个发布流程"},
+  {"name": "dirty gate runs before fetch", "pattern": "不得对任何服务执行 fetch"},
+  {"name": "all repositories rechecked", "pattern": "重新检查全部服务"},
+  {"name": "run filename contract", "pattern": "YYYY-MM-DD-<清洗后的需求名称>-<场景>-<状态>\\.md"},
+  {"name": "collision suffix contract", "pattern": "从 `-2` 开始的最小可用递增序号"},
+  {"name": "stage status table", "pattern": "\\| 服务名 \\| release创建 \\| release推送 \\| master合并 \\| master推送 \\| tag创建 \\| tag推送 \\| 需人工处理 \\|"},
+  {"name": "master side effect recorded", "pattern": "master 推送成功但 tag 创建或推送失败"},
+  {"name": "master replay prohibited", "pattern": "不得重新合并或重复推送 master"}
+]
